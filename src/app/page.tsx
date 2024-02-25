@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import styles from './page.module.scss';
 
 export default async function Index() {
@@ -9,10 +10,17 @@ export default async function Index() {
   return (
     <div className={styles.page}>
       <div className="wrapper">
+          <header className='w-screen bg-lime-200 left-0 top-0'>
+            <menu className='w-screen flex flex-row justify-start'>
+              <li className='mx-8 my-4'><Link href="/home">Home</Link></li>
+              <li className='mx-8 my-4'><Link href="/test">Menu 1</Link></li>
+              <li className='mx-8 my-4'><Link href="/feature/sousmodule1">Sous module 1</Link></li>
+            </menu>
+          </header>
         <div className="container">
           <div id="welcome">
             <h1>
-              <span> Hello there, </span>
+              <span className='text-3xl font-bold underline'> Hello there, </span>
               Welcome next-setup 👋
             </h1>
           </div>
